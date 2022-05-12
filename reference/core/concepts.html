@@ -107,15 +107,9 @@
 specified otherwise.</p>
 </div>
 <dl class="cpp concept">
-<dt class="sig sig-object cpp" id="_CPPv4I0EN5units12PrefixFamilyE">
-<span id="_CPPv3I0EN5units12PrefixFamilyE"></span><span id="_CPPv2I0EN5units12PrefixFamilyE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="k"><span class="pre">concept</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PrefixFamily</span></span></span><a class="headerlink" href="#_CPPv4I0EN5units12PrefixFamilyE" title="Permalink to this definition"></a><br /></dt>
-<dd><p>A concept matching a prefix family. Satisfied by all types derived from <a class="reference internal" href="types/prefixes.html#_CPPv4N5units13prefix_familyE" title="units::prefix_family"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">prefix_family</span></code></a>.</p>
-</dd></dl>
-
-<dl class="cpp concept">
 <dt class="sig sig-object cpp" id="_CPPv4I0EN5units6PrefixE">
 <span id="_CPPv3I0EN5units6PrefixE"></span><span id="_CPPv2I0EN5units6PrefixE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="k"><span class="pre">concept</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Prefix</span></span></span><a class="headerlink" href="#_CPPv4I0EN5units6PrefixE" title="Permalink to this definition"></a><br /></dt>
-<dd><p>A concept matching a symbol prefix. Satisfied by all instantiations of <a class="reference internal" href="types/prefixes.html#_CPPv4I0_12PrefixFamily_17basic_symbol_text_5ratioEN5units6prefixE" title="units::prefix"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">prefix</span></code></a>.</p>
+<dd><p>A concept matching a symbol prefix. Satisfied by all instantiations of <a class="reference internal" href="types/prefixes.html#_CPPv4I0_17basic_symbol_text_5ratioEN5units6prefixE" title="units::prefix"><code class="xref cpp cpp-struct docutils literal notranslate"><span class="pre">prefix</span></code></a>.</p>
 </dd></dl>
 
 <dl class="cpp concept">
@@ -128,7 +122,7 @@ specified otherwise.</p>
 <dt class="sig sig-object cpp" id="_CPPv4I0EN5units13BaseDimensionE">
 <span id="_CPPv3I0EN5units13BaseDimensionE"></span><span id="_CPPv2I0EN5units13BaseDimensionE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="k"><span class="pre">concept</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BaseDimension</span></span></span><a class="headerlink" href="#_CPPv4I0EN5units13BaseDimensionE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>A concept matching all base dimensions in the library. Satisfied by all dimension types
-derived from the instantiation of <a class="reference internal" href="types/dimensions.html#_CPPv4I_18basic_fixed_string_4UnitEN5units14base_dimensionE" title="units::base_dimension"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">base_dimension</span></code></a>.</p>
+derived from the instantiation of <a class="reference internal" href="types/dimensions.html#_CPPv4I_18basic_fixed_string_9NamedUnitEN5units14base_dimensionE" title="units::base_dimension"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">base_dimension</span></code></a>.</p>
 </dd></dl>
 
 <dl class="cpp concept">
@@ -156,6 +150,13 @@ which either <span class="cpp-expr sig sig-inline cpp"><a class="reference inter
 <span id="_CPPv3I0EN5units4UnitE"></span><span id="_CPPv2I0EN5units4UnitE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="k"><span class="pre">concept</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Unit</span></span></span><a class="headerlink" href="#_CPPv4I0EN5units4UnitE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>A concept matching all unit types in the library. Satisfied by all unit types derived
 from the instantiation of <a class="reference internal" href="types/units.html#_CPPv4I_5ratio0EN5units11scaled_unitE" title="units::scaled_unit"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">scaled_unit</span></code></a>.</p>
+</dd></dl>
+
+<dl class="cpp concept">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN5units9NamedUnitE">
+<span id="_CPPv3I0EN5units9NamedUnitE"></span><span id="_CPPv2I0EN5units9NamedUnitE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="k"><span class="pre">concept</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NamedUnit</span></span></span><a class="headerlink" href="#_CPPv4I0EN5units9NamedUnitE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>A concept matching all unit types that have an atomic text symbol that can be used to aggregate it with
+other named units to form a final symbol of a derived unit.</p>
 </dd></dl>
 
 <dl class="cpp concept">

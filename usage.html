@@ -395,7 +395,7 @@ for each CMake target directly linking with <code class="docutils literal notran
 <blockquote>
 <div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mkdir my_project/build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> my_project/build
 conan install .. -pr &lt;your_conan_profile&gt; -s compiler.cppstd<span class="o">=</span><span class="m">20</span> -b<span class="o">=</span>missing
-cmake .. -DCMAKE_TOOLCHAIN_FILE<span class="o">=</span>conan_toolchain.cmake
+cmake .. -DCMAKE_TOOLCHAIN_FILE<span class="o">=</span>conan_toolchain.cmake -DCMAKE_BUILD_TYPE<span class="o">=</span>Release
 cmake --build .
 </pre></div>
 </div>
@@ -451,7 +451,7 @@ differences:</p>
 <blockquote>
 <div><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mkdir my_project/build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> my_project/build
 conan install .. -pr &lt;your_conan_profile&gt; -s compiler.cppstd<span class="o">=</span><span class="m">20</span> -b<span class="o">=</span>outdated -u
-cmake .. -DCMAKE_TOOLCHAIN_FILE<span class="o">=</span>conan_toolchain.cmake
+cmake .. -DCMAKE_TOOLCHAIN_FILE<span class="o">=</span>conan_toolchain.cmake -DCMAKE_BUILD_TYPE<span class="o">=</span>Release
 cmake --build .
 </pre></div>
 </div>
@@ -464,7 +464,7 @@ library on your file system and use it via <code class="docutils literal notrans
 to find it, it is enough to perform the following steps:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mkdir units/build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> units/build
 conan install .. -pr &lt;your_conan_profile&gt; -s compiler.cppstd<span class="o">=</span><span class="m">20</span> -b<span class="o">=</span>missing
-cmake ../src -DCMAKE_TOOLCHAIN_FILE<span class="o">=</span>conan_toolchain.cmake
+cmake ../src -DCMAKE_TOOLCHAIN_FILE<span class="o">=</span>conan_toolchain.cmake -DCMAKE_BUILD_TYPE<span class="o">=</span>Release
 cmake --install . --prefix &lt;install_dir&gt;
 </pre></div>
 </div>
@@ -492,7 +492,7 @@ build all of the source code and documentation, and run unit tests.</p>
 <p>If you prefer to build the project via CMake rather then Conan, then you should replace the last <code class="docutils literal notranslate"><span class="pre">conan</span> <span class="pre">build</span> <span class="pre">..</span></code>
 step with the CMake build:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># ...</span>
-cmake .. -DCMAKE_TOOLCHAIN_FILE<span class="o">=</span>conan_toolchain.cmake
+cmake .. -DCMAKE_TOOLCHAIN_FILE<span class="o">=</span>conan_toolchain.cmake -DCMAKE_BUILD_TYPE<span class="o">=</span>Release
 cmake --build .
 ctest
 </pre></div>
