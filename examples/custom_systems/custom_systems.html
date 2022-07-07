@@ -16,6 +16,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -104,7 +105,7 @@
            <div itemprop="articleBody">
              
   <section id="custom-systems">
-<h1>custom_systems<a class="headerlink" href="#custom-systems" title="Permalink to this headline"></a></h1>
+<h1>custom_systems<a class="headerlink" href="#custom-systems" title="Permalink to this heading"></a></h1>
 <div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-text">custom_systems.cpp</span><a class="headerlink" href="#id1" title="Permalink to this code"></a></div>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="cp">#include</span> <span class="cpf">&lt;units/base_dimension.h&gt;</span><span class="cp"></span>
@@ -120,7 +121,7 @@
 <span class="linenos">11</span><span class="k">namespace</span> <span class="n">fps</span> <span class="p">{</span>
 <span class="linenos">12</span>
 <span class="linenos">13</span><span class="k">struct</span> <span class="nl">foot</span> <span class="p">:</span> <span class="n">named_unit</span><span class="o">&lt;</span><span class="n">foot</span><span class="p">,</span> <span class="s">&quot;ft&quot;</span><span class="o">&gt;</span> <span class="p">{};</span>
-<span class="linenos">14</span><span class="k">struct</span> <span class="nl">yard</span> <span class="p">:</span> <span class="n">named_scaled_unit</span><span class="o">&lt;</span><span class="n">yard</span><span class="p">,</span> <span class="s">&quot;yd&quot;</span><span class="p">,</span> <span class="n">ratio</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">foot</span><span class="o">&gt;</span> <span class="p">{};</span>
+<span class="linenos">14</span><span class="k">struct</span> <span class="nl">yard</span> <span class="p">:</span> <span class="n">named_scaled_unit</span><span class="o">&lt;</span><span class="n">yard</span><span class="p">,</span> <span class="s">&quot;yd&quot;</span><span class="p">,</span> <span class="n">as_magnitude</span><span class="o">&lt;</span><span class="mi">3</span><span class="o">&gt;</span><span class="p">(),</span> <span class="n">foot</span><span class="o">&gt;</span> <span class="p">{};</span>
 <span class="linenos">15</span>
 <span class="linenos">16</span><span class="k">struct</span> <span class="nl">dim_length</span> <span class="p">:</span> <span class="n">base_dimension</span><span class="o">&lt;</span><span class="s">&quot;L&quot;</span><span class="p">,</span> <span class="n">foot</span><span class="o">&gt;</span> <span class="p">{};</span>
 <span class="linenos">17</span>
@@ -141,8 +142,8 @@
 <span class="linenos">32</span>
 <span class="linenos">33</span><span class="k">namespace</span> <span class="n">fps</span> <span class="p">{</span>
 <span class="linenos">34</span>
-<span class="linenos">35</span><span class="k">struct</span> <span class="nl">foot</span> <span class="p">:</span> <span class="n">named_scaled_unit</span><span class="o">&lt;</span><span class="n">foot</span><span class="p">,</span> <span class="s">&quot;ft&quot;</span><span class="p">,</span> <span class="n">ratio</span><span class="p">(</span><span class="mi">3&#39;048</span><span class="p">,</span> <span class="mi">1&#39;000</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">metre</span><span class="o">&gt;</span> <span class="p">{};</span>
-<span class="linenos">36</span><span class="k">struct</span> <span class="nl">yard</span> <span class="p">:</span> <span class="n">named_scaled_unit</span><span class="o">&lt;</span><span class="n">yard</span><span class="p">,</span> <span class="s">&quot;yd&quot;</span><span class="p">,</span> <span class="n">ratio</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">foot</span><span class="o">&gt;</span> <span class="p">{};</span>
+<span class="linenos">35</span><span class="k">struct</span> <span class="nl">foot</span> <span class="p">:</span> <span class="n">named_scaled_unit</span><span class="o">&lt;</span><span class="n">foot</span><span class="p">,</span> <span class="s">&quot;ft&quot;</span><span class="p">,</span> <span class="n">as_magnitude</span><span class="o">&lt;</span><span class="n">ratio</span><span class="p">(</span><span class="mi">3&#39;048</span><span class="p">,</span> <span class="mi">1&#39;000</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">&gt;</span><span class="p">(),</span> <span class="n">metre</span><span class="o">&gt;</span> <span class="p">{};</span>
+<span class="linenos">36</span><span class="k">struct</span> <span class="nl">yard</span> <span class="p">:</span> <span class="n">named_scaled_unit</span><span class="o">&lt;</span><span class="n">yard</span><span class="p">,</span> <span class="s">&quot;yd&quot;</span><span class="p">,</span> <span class="n">as_magnitude</span><span class="o">&lt;</span><span class="mi">3</span><span class="o">&gt;</span><span class="p">(),</span> <span class="n">foot</span><span class="o">&gt;</span> <span class="p">{};</span>
 <span class="linenos">37</span>
 <span class="linenos">38</span><span class="k">struct</span> <span class="nl">dim_length</span> <span class="p">:</span> <span class="n">base_dimension</span><span class="o">&lt;</span><span class="s">&quot;L&quot;</span><span class="p">,</span> <span class="n">foot</span><span class="o">&gt;</span> <span class="p">{};</span>
 <span class="linenos">39</span>
@@ -190,7 +191,7 @@
 <span class="linenos">81</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">os</span><span class="p">,</span> <span class="k">const</span> <span class="n">U</span><span class="o">&amp;</span> <span class="n">u</span><span class="p">)</span>
 <span class="linenos">82</span><span class="p">{</span>
 <span class="linenos">83</span>  <span class="k">using</span> <span class="n">unit_type</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">remove_cvref_t</span><span class="o">&lt;</span><span class="k">decltype</span><span class="p">(</span><span class="n">u</span><span class="p">)</span><span class="o">&gt;</span><span class="p">;</span>
-<span class="linenos">84</span>  <span class="k">return</span> <span class="n">os</span> <span class="o">&lt;&lt;</span> <span class="n">unit_type</span><span class="o">::</span><span class="n">ratio</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; x &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">unit_type</span><span class="o">::</span><span class="n">reference</span><span class="o">::</span><span class="n">symbol</span><span class="p">.</span><span class="n">standard</span><span class="p">();</span>
+<span class="linenos">84</span>  <span class="k">return</span> <span class="n">os</span> <span class="o">&lt;&lt;</span> <span class="n">as_ratio</span><span class="p">(</span><span class="n">unit_type</span><span class="o">::</span><span class="n">mag</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; x &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">unit_type</span><span class="o">::</span><span class="n">reference</span><span class="o">::</span><span class="n">symbol</span><span class="p">.</span><span class="n">standard</span><span class="p">();</span>
 <span class="linenos">85</span><span class="p">}</span>
 <span class="linenos">86</span>
 <span class="linenos">87</span><span class="kt">void</span> <span class="n">what_is_your_ratio</span><span class="p">()</span>

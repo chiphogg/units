@@ -16,6 +16,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -48,6 +49,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../quick_start.html">Quick Start</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../framework.html">Framework Basics</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="basic_concepts.html">Basic Concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quantity_like.html">Quantity-like Types</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quantities.html">Quantities</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quantity_points.html">Quantity Points</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quantity_kinds.html">Quantity Kinds</a></li>
@@ -110,13 +112,13 @@
            <div itemprop="articleBody">
              
   <section id="dimensions">
-<h1>Dimensions<a class="headerlink" href="#dimensions" title="Permalink to this headline"></a></h1>
+<h1>Dimensions<a class="headerlink" href="#dimensions" title="Permalink to this heading"></a></h1>
 <p>In the previous chapter we briefly introduced the notion of a physical
 <a class="reference internal" href="../glossary.html#term-dimension"><span class="xref std std-term">dimension</span></a>. Now it is time to learn much more about this subject.
 Length, time, speed, area, energy are only a few examples of physical
 dimensions.</p>
 <object data="../_images/dimensions.svg" type="image/svg+xml" class="align-center" style="max-width: 100%;"></object><section id="base-dimensions">
-<h2>Base Dimensions<a class="headerlink" href="#base-dimensions" title="Permalink to this headline"></a></h2>
+<h2>Base Dimensions<a class="headerlink" href="#base-dimensions" title="Permalink to this heading"></a></h2>
 <p>The quantities of base dimensions are called
 <a class="reference internal" href="../glossary.html#term-base-quantity"><span class="xref std std-term">base quantities</span></a> which are the atomic building blocks
 of a <a class="reference internal" href="../glossary.html#term-system-of-quantities"><span class="xref std std-term">system of quantities</span></a>. For example the The International System
@@ -140,7 +142,7 @@ obtain those back easily with:</p>
 </div>
 </section>
 <section id="derived-dimensions">
-<h2>Derived Dimensions<a class="headerlink" href="#derived-dimensions" title="Permalink to this headline"></a></h2>
+<h2>Derived Dimensions<a class="headerlink" href="#derived-dimensions" title="Permalink to this heading"></a></h2>
 <p>The quantities of derived dimensions are called
 <a class="reference internal" href="../glossary.html#term-derived-quantity"><span class="xref std std-term">derived quantities</span></a> and are derived from base
 quantities. This means that they are created by multiplying or dividing
@@ -203,13 +205,11 @@ child class inherited from the instantiation of this <a class="reference interna
 class template. This is called a
 <abbr title="Curiously Recurring Template Parameter">CRTP</abbr> Idiom and is used
 in many places in this library to provide
-<a class="reference internal" href="../design/downcasting.html#the-downcasting-facility"><span class="std std-ref">The Downcasting Facility</span></a>.
-Hopefully if <a class="reference internal" href="../references.html#p0847" id="id1"><span>[P0847]</span></a> will land in C++23 the additional CRTP-related
-template parameter will be removed from this definition.</p>
+<a class="reference internal" href="../design/downcasting.html#the-downcasting-facility"><span class="std std-ref">The Downcasting Facility</span></a>.</p>
 </div>
 </section>
 <section id="obtaining-a-unit-of-the-dimension">
-<h2>Obtaining a Unit of the Dimension<a class="headerlink" href="#obtaining-a-unit-of-the-dimension" title="Permalink to this headline"></a></h2>
+<h2>Obtaining a Unit of the Dimension<a class="headerlink" href="#obtaining-a-unit-of-the-dimension" title="Permalink to this heading"></a></h2>
 <p>In order to obtain the base/coherent unit of any dimension type a
 <a class="reference internal" href="../reference/core/metafunctions.html#_CPPv4I_9DimensionEN5units14dimension_unitE" title="units::dimension_unit"><code class="xref cpp cpp-any docutils literal notranslate"><span class="pre">dimension_unit</span></code></a> helper was introduced:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">static_assert</span><span class="p">(</span><span class="n">is_same_v</span><span class="o">&lt;</span><span class="n">dimension_unit</span><span class="o">&lt;</span><span class="n">si</span><span class="o">::</span><span class="n">dim_length</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">si</span><span class="o">::</span><span class="n">metre</span><span class="o">&gt;</span><span class="p">);</span>

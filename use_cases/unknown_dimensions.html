@@ -16,6 +16,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -107,12 +108,12 @@
            <div itemprop="articleBody">
              
   <section id="working-with-unknown-dimensions-and-their-units">
-<h1>Working with Unknown Dimensions and Their Units<a class="headerlink" href="#working-with-unknown-dimensions-and-their-units" title="Permalink to this headline"></a></h1>
+<h1>Working with Unknown Dimensions and Their Units<a class="headerlink" href="#working-with-unknown-dimensions-and-their-units" title="Permalink to this heading"></a></h1>
 <p>From time to time the user of this library will face an <a class="reference internal" href="../reference/systems/generic/unknown.html#_CPPv4I_Dp8ExponentEN5units17unknown_dimensionE" title="units::unknown_dimension"><code class="xref cpp cpp-any docutils literal notranslate"><span class="pre">unknown_dimension</span></code></a> and
 <a class="reference internal" href="../reference/systems/generic/unknown.html#_CPPv4N5units21unknown_coherent_unitE" title="units::unknown_coherent_unit"><code class="xref cpp cpp-any docutils literal notranslate"><span class="pre">unknown_coherent_unit</span></code></a> types. This chapters describes their purpose and usage in
 detail.</p>
 <section id="what-is-an-unknown-dimension">
-<h2>What is an unknown dimension?<a class="headerlink" href="#what-is-an-unknown-dimension" title="Permalink to this headline"></a></h2>
+<h2>What is an unknown dimension?<a class="headerlink" href="#what-is-an-unknown-dimension" title="Permalink to this heading"></a></h2>
 <p>As we learned in the <a class="reference internal" href="../framework/dimensions.html#dimensions"><span class="std std-ref">Dimensions</span></a> chapter, in most cases the result
 of multiplying or dividing two quantities of specific dimensions is a quantity of yet another
 dimension.</p>
@@ -157,7 +158,7 @@ with all the definitions for the current system (e.g. <em>units/isq/si/si.h</em>
 </div>
 </section>
 <section id="operations-on-unknown-dimensions-and-their-units">
-<h2>Operations On Unknown Dimensions And Their Units<a class="headerlink" href="#operations-on-unknown-dimensions-and-their-units" title="Permalink to this headline"></a></h2>
+<h2>Operations On Unknown Dimensions And Their Units<a class="headerlink" href="#operations-on-unknown-dimensions-and-their-units" title="Permalink to this heading"></a></h2>
 <p>For some cases we can eliminate the need to predefine a specific dimension and just use
 the <a class="reference internal" href="../reference/systems/generic/unknown.html#_CPPv4I_Dp8ExponentEN5units17unknown_dimensionE" title="units::unknown_dimension"><code class="xref cpp cpp-any docutils literal notranslate"><span class="pre">unknown_dimension</span></code></a> instead. Let’s play with the previous example a bit:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">static_assert</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">number</span><span class="p">()</span> <span class="o">==</span> <span class="mi">72</span><span class="p">);</span>
@@ -188,7 +189,7 @@ following:</p>
 </div>
 </section>
 <section id="temporary-results">
-<h2>Temporary Results<a class="headerlink" href="#temporary-results" title="Permalink to this headline"></a></h2>
+<h2>Temporary Results<a class="headerlink" href="#temporary-results" title="Permalink to this heading"></a></h2>
 <p>In many cases there is nothing inherently wrong with having unknown dimensions and units
 in your program. A typical example here are temporary results of a long calculation:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span> <span class="nf">some_long_calculation</span><span class="p">(</span><span class="n">Length</span> <span class="k">auto</span> <span class="n">d</span><span class="p">,</span> <span class="n">Time</span> <span class="k">auto</span> <span class="n">t</span><span class="p">)</span>
