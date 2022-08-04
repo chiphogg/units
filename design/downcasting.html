@@ -113,18 +113,18 @@ result the potential error log contains a huge source type rather than a short a
 The same can be observed during debugging of a source code that use template aliases.</p>
 <p>Let’s assume that we want to provide a user friendly name for a derived dimension of capacitance
 quantity. Other libraries will do it in the following way:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">dim_capacitance</span> <span class="o">=</span> <span class="n">detail</span><span class="o">::</span><span class="n">derived_dimension_base</span><span class="o">&lt;</span><span class="n">exponent</span><span class="o">&lt;</span><span class="n">si</span><span class="o">::</span><span class="n">dim_electric_current</span><span class="p">,</span> <span class="mi">2</span><span class="o">&gt;</span><span class="p">,</span>
-                                                       <span class="n">exponent</span><span class="o">&lt;</span><span class="n">si</span><span class="o">::</span><span class="n">dim_length</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="o">&gt;</span><span class="p">,</span>
-                                                       <span class="n">exponent</span><span class="o">&lt;</span><span class="n">si</span><span class="o">::</span><span class="n">dim_mass</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="o">&gt;</span><span class="p">,</span>
-                                                       <span class="n">exponent</span><span class="o">&lt;</span><span class="n">si</span><span class="o">::</span><span class="n">dim_time</span><span class="p">,</span> <span class="mi">4</span><span class="o">&gt;&gt;</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="n">dim_capacitance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">detail</span><span class="o">::</span><span class="n">derived_dimension_base</span><span class="o">&lt;</span><span class="n">exponent</span><span class="o">&lt;</span><span class="n">si</span><span class="o">::</span><span class="n">dim_electric_current</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                                       </span><span class="n">exponent</span><span class="o">&lt;</span><span class="n">si</span><span class="o">::</span><span class="n">dim_length</span><span class="p">,</span><span class="w"> </span><span class="mi">-2</span><span class="o">&gt;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                                       </span><span class="n">exponent</span><span class="o">&lt;</span><span class="n">si</span><span class="o">::</span><span class="n">dim_mass</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="o">&gt;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                                                       </span><span class="n">exponent</span><span class="o">&lt;</span><span class="n">si</span><span class="o">::</span><span class="n">dim_time</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="o">&gt;&gt;</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
 <p>The above solution does provide a good developer’s experience but a really poor one for the end
 user. If we will get a compilation error message containing <code class="docutils literal notranslate"><span class="pre">dim_capacitance</span></code> in most cases
 the compiler will print the following type instead of the alias:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">units</span><span class="o">::</span><span class="n">detail</span><span class="o">::</span><span class="n">derived_dimension_base</span><span class="o">&lt;</span><span class="n">units</span><span class="o">::</span><span class="n">exponent</span><span class="o">&lt;</span><span class="n">units</span><span class="o">::</span><span class="n">isq</span><span class="o">::</span><span class="n">si</span><span class="o">::</span><span class="n">dim_electric_current</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="o">&gt;</span><span class="p">,</span>
-<span class="n">units</span><span class="o">::</span><span class="n">exponent</span><span class="o">&lt;</span><span class="n">units</span><span class="o">::</span><span class="n">isq</span><span class="o">::</span><span class="n">si</span><span class="o">::</span><span class="n">dim_length</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">units</span><span class="o">::</span><span class="n">exponent</span><span class="o">&lt;</span><span class="n">units</span><span class="o">::</span><span class="n">isq</span><span class="o">::</span><span class="n">si</span><span class="o">::</span><span class="n">dim_mass</span><span class="p">,</span>
-<span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">units</span><span class="o">::</span><span class="n">exponent</span><span class="o">&lt;</span><span class="n">units</span><span class="o">::</span><span class="n">isq</span><span class="o">::</span><span class="n">si</span><span class="o">::</span><span class="n">dim_time</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="o">&gt;</span> <span class="o">&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">units</span><span class="o">::</span><span class="n">detail</span><span class="o">::</span><span class="n">derived_dimension_base</span><span class="o">&lt;</span><span class="n">units</span><span class="o">::</span><span class="n">exponent</span><span class="o">&lt;</span><span class="n">units</span><span class="o">::</span><span class="n">isq</span><span class="o">::</span><span class="n">si</span><span class="o">::</span><span class="n">dim_electric_current</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span><span class="p">,</span><span class="w"></span>
+<span class="n">units</span><span class="o">::</span><span class="n">exponent</span><span class="o">&lt;</span><span class="n">units</span><span class="o">::</span><span class="n">isq</span><span class="o">::</span><span class="n">si</span><span class="o">::</span><span class="n">dim_length</span><span class="p">,</span><span class="w"> </span><span class="mi">-2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">units</span><span class="o">::</span><span class="n">exponent</span><span class="o">&lt;</span><span class="n">units</span><span class="o">::</span><span class="n">isq</span><span class="o">::</span><span class="n">si</span><span class="o">::</span><span class="n">dim_mass</span><span class="p">,</span><span class="w"></span>
+<span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">units</span><span class="o">::</span><span class="n">exponent</span><span class="o">&lt;</span><span class="n">units</span><span class="o">::</span><span class="n">isq</span><span class="o">::</span><span class="n">si</span><span class="o">::</span><span class="n">dim_time</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"></span>
 </pre></div>
 </div>
 <p>You can notice that in case of <strong>mp-units</strong> even this long syntax was carefully selected to
@@ -168,11 +168,11 @@ already used base class template instantiation the program will not compile.</p>
 idiom, stores the base of a downcasting operation in a <code class="docutils literal notranslate"><span class="pre">downcast_base_type</span></code> member type,
 and provides only a Hidden Friend non-member function declaration of <code class="docutils literal notranslate"><span class="pre">downcast_guide</span></code> which is an
 <abbr title="Argument Dependent Lookup">ADL</abbr> entry  point for the downcasting operation:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">BaseType</span><span class="o">&gt;</span>
-<span class="k">struct</span> <span class="n">downcast_base</span> <span class="p">{</span>
-  <span class="k">using</span> <span class="n">downcast_base_type</span> <span class="o">=</span> <span class="n">BaseType</span><span class="p">;</span>
-  <span class="k">friend</span> <span class="k">auto</span> <span class="nf">downcast_guide</span><span class="p">(</span><span class="n">downcast_base</span><span class="p">);</span>  <span class="c1">// declaration only (no implementation)</span>
-<span class="p">};</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">BaseType</span><span class="o">&gt;</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">downcast_base</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="n">downcast_base_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">BaseType</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">friend</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">downcast_guide</span><span class="p">(</span><span class="n">downcast_base</span><span class="p">);</span><span class="w">  </span><span class="c1">// declaration only (no implementation)</span>
+<span class="p">};</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="admonition important">
@@ -184,22 +184,22 @@ in its declaration and no definition is provided at this point.</p>
 <li><p><a class="reference internal" href="../reference/core/downcasting.html#_CPPv4I0_12DowncastableEN5units14downcast_childE" title="units::downcast_child"><code class="xref cpp cpp-any docutils literal notranslate"><span class="pre">downcast_child</span></code></a> is another <abbr title="Curiously Recurring Template Pattern">CRTP</abbr> class template
 that defines the implementation of a non-member friend function of the <a class="reference internal" href="../reference/core/downcasting.html#_CPPv4I0EN5units13downcast_baseE" title="units::downcast_base"><code class="xref cpp cpp-any docutils literal notranslate"><span class="pre">downcast_base</span></code></a> class
 template:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">Target</span><span class="p">,</span> <span class="n">Downcastable</span> <span class="n">T</span><span class="o">&gt;</span>
-<span class="k">struct</span> <span class="nl">downcast_child</span> <span class="p">:</span> <span class="n">T</span> <span class="p">{</span>
-  <span class="k">friend</span> <span class="k">auto</span> <span class="n">downcast_guide</span><span class="p">(</span><span class="k">typename</span> <span class="n">T</span><span class="o">::</span><span class="n">downcast_base</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">Target</span><span class="p">();</span> <span class="p">}</span>
-<span class="p">};</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">Target</span><span class="p">,</span><span class="w"> </span><span class="n">Downcastable</span><span class="w"> </span><span class="n">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">downcast_child</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">friend</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">downcast_guide</span><span class="p">(</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">::</span><span class="n">downcast_base</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">Target</span><span class="p">();</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
 </pre></div>
 </div>
 <p>This is the place where the actual return type of the <code class="docutils literal notranslate"><span class="pre">downcast_guide</span></code> function is provided
 which serves as a target type of the downcasting operation.</p>
 <p>In the above class template definition <a class="reference internal" href="../reference/core/downcasting.html#_CPPv4I0E12Downcastable" title="Downcastable"><code class="xref cpp cpp-any docutils literal notranslate"><span class="pre">Downcastable</span></code></a> is a concepts that verifies if a type
 implements and can be used in a downcasting facility:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
-<span class="k">concept</span> <span class="n">Downcastable</span> <span class="o">=</span>
-    <span class="k">requires</span> <span class="p">{</span>
-      <span class="k">typename</span> <span class="n">T</span><span class="o">::</span><span class="n">downcast_base_type</span><span class="p">;</span>
-    <span class="p">}</span> <span class="o">&amp;&amp;</span>
-    <span class="n">std</span><span class="o">::</span><span class="n">derived_from</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">downcast_base</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">::</span><span class="n">downcast_base_type</span><span class="o">&gt;&gt;</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="k">concept</span><span class="w"> </span><span class="nc">Downcastable</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<span class="w">    </span><span class="k">requires</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">::</span><span class="n">downcast_base_type</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">derived_from</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">downcast_base</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">::</span><span class="n">downcast_base_type</span><span class="o">&gt;&gt;</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
 </li>
@@ -210,29 +210,29 @@ from <a class="reference internal" href="../reference/core/downcasting.html#_CPP
 class template.</p>
 <p>Until now we scoped on how we define the base and target of a downcasting operation. To
 perform the actual downcasting operation a dedicated alias template is provided:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="n">Downcastable</span> <span class="n">T</span><span class="o">&gt;</span>
-<span class="k">using</span> <span class="n">downcast</span> <span class="o">=</span> <span class="k">decltype</span><span class="p">(</span><span class="n">detail</span><span class="o">::</span><span class="n">downcast_impl</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">());</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">template</span><span class="o">&lt;</span><span class="n">Downcastable</span><span class="w"> </span><span class="n">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="n">downcast</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">decltype</span><span class="p">(</span><span class="n">detail</span><span class="o">::</span><span class="n">downcast_impl</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">());</span><span class="w"></span>
 </pre></div>
 </div>
 <p><code class="xref cpp cpp-any docutils literal notranslate"><span class="pre">downcast</span></code> is used to obtain the target type of the downcasting operation registered for a
 given instantiation in a base type. <code class="docutils literal notranslate"><span class="pre">detail::downcast_impl</span></code> checks if a downcasting
 target is registered for the specific base class. If yes, it returns the registered type,
 otherwise it works like a regular identity type trait returning a provided base class:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">namespace</span> <span class="n">detail</span> <span class="p">{</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">namespace</span><span class="w"> </span><span class="nn">detail</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
-  <span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
-  <span class="k">concept</span> <span class="n">has_downcast_guide</span> <span class="o">=</span> <span class="k">requires</span><span class="p">(</span><span class="n">T</span> <span class="n">t</span><span class="p">)</span> <span class="p">{</span> <span class="n">downcast_guide</span><span class="p">(</span><span class="n">t</span><span class="p">);</span> <span class="p">};</span>
+<span class="w">  </span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="w">  </span><span class="k">concept</span><span class="w"> </span><span class="nc">has_downcast_guide</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">requires</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">downcast_guide</span><span class="p">(</span><span class="n">t</span><span class="p">);</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
 
-  <span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="n">T</span><span class="o">&gt;</span>
-  <span class="k">constexpr</span> <span class="k">auto</span> <span class="n">downcast_impl</span><span class="p">()</span>
-  <span class="p">{</span>
-    <span class="k">if</span> <span class="k">constexpr</span><span class="p">(</span><span class="n">has_downcast_guide</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">)</span>
-      <span class="k">return</span> <span class="k">decltype</span><span class="p">(</span><span class="n">downcast_guide</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">declval</span><span class="o">&lt;</span><span class="n">downcast_base</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="p">()))();</span>
-    <span class="k">else</span>
-      <span class="k">return</span> <span class="nf">T</span><span class="p">();</span>
-  <span class="p">}</span>
+<span class="w">  </span><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span><span class="w"></span>
+<span class="w">  </span><span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">downcast_impl</span><span class="p">()</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="k">constexpr</span><span class="p">(</span><span class="n">has_downcast_guide</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="k">decltype</span><span class="p">(</span><span class="n">downcast_guide</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">declval</span><span class="o">&lt;</span><span class="n">downcast_base</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="p">()))();</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">T</span><span class="p">();</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
 
-<span class="p">}</span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </section>

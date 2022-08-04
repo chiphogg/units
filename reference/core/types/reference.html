@@ -120,32 +120,32 @@
 <span id="_CPPv3I_9Dimension_6UnitOfI1DEEN5units9referenceE"></span><span id="_CPPv2I_9Dimension_6UnitOfI1DEEN5units9referenceE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../concepts.html#_CPPv4I0EN5units9DimensionE" title="units::Dimension"><span class="n"><span class="pre">Dimension</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">D</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="../concepts.html#_CPPv4I00EN5units6UnitOfE" title="units::UnitOf"><span class="n"><span class="pre">UnitOf</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I_9Dimension_6UnitOfI1DEEN5units9referenceE" title="units::reference::D"><span class="n"><span class="pre">D</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">U</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="structunits_1_1reference"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reference</span></span></span><a class="headerlink" href="#_CPPv4I_9Dimension_6UnitOfI1DEEN5units9referenceE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>The type for quantity references. </p>
 <p>This type is intended to be used in the quantity references definition:</p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">namespace</span> <span class="n">length_references</span> <span class="p">{</span>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">namespace</span><span class="w"> </span><span class="nn">length_references</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
-<span class="kr">inline</span> <span class="k">constexpr</span> <span class="k">auto</span> <span class="n">m</span> <span class="o">=</span> <span class="n">reference</span><span class="o">&lt;</span><span class="n">dim_length</span><span class="p">,</span> <span class="n">metre</span><span class="o">&gt;</span><span class="p">{};</span>
-<span class="kr">inline</span> <span class="k">constexpr</span> <span class="k">auto</span> <span class="n">km</span> <span class="o">=</span> <span class="n">reference</span><span class="o">&lt;</span><span class="n">dim_length</span><span class="p">,</span> <span class="n">kilometre</span><span class="o">&gt;</span><span class="p">{};</span>
+<span class="kr">inline</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reference</span><span class="o">&lt;</span><span class="n">dim_length</span><span class="p">,</span><span class="w"> </span><span class="n">metre</span><span class="o">&gt;</span><span class="p">{};</span><span class="w"></span>
+<span class="kr">inline</span><span class="w"> </span><span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">km</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">reference</span><span class="o">&lt;</span><span class="n">dim_length</span><span class="p">,</span><span class="w"> </span><span class="n">kilometre</span><span class="o">&gt;</span><span class="p">{};</span><span class="w"></span>
 
-<span class="p">}</span>
+<span class="p">}</span><span class="w"></span>
 
-<span class="k">namespace</span> <span class="n">references</span> <span class="p">{</span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">references</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">length_references</span><span class="p">;</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">length_references</span><span class="p">;</span><span class="w"></span>
 
-<span class="p">}</span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </p>
 <p>Quantity references simplify quantity creation:</p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">units</span><span class="o">::</span><span class="n">isq</span><span class="o">::</span><span class="n">si</span><span class="o">::</span><span class="n">references</span><span class="p">;</span>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">units</span><span class="o">::</span><span class="nn">isq</span><span class="o">::</span><span class="nn">si</span><span class="o">::</span><span class="nn">references</span><span class="p">;</span><span class="w"></span>
 
-<span class="k">auto</span> <span class="n">d</span> <span class="o">=</span> <span class="mi">123</span> <span class="o">*</span> <span class="n">m</span><span class="p">;</span>
-<span class="k">auto</span> <span class="n">v</span> <span class="o">=</span> <span class="mi">70</span> <span class="o">*</span> <span class="p">(</span><span class="n">km</span> <span class="o">/</span> <span class="n">h</span><span class="p">);</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">123</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">m</span><span class="p">;</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">70</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">km</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">h</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 </p>
 <p>Also, it is allowed to define custom quantity references from existing ones:</p>
-<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">constexpr</span> <span class="k">auto</span> <span class="n">Nm</span> <span class="o">=</span> <span class="n">N</span> <span class="o">*</span> <span class="n">m</span><span class="p">;</span>
-<span class="k">constexpr</span> <span class="k">auto</span> <span class="n">mph</span> <span class="o">=</span> <span class="n">mi</span> <span class="o">/</span> <span class="n">h</span><span class="p">;</span>
+<p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">Nm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">m</span><span class="p">;</span><span class="w"></span>
+<span class="k">constexpr</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">mph</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mi</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">h</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
 </p>
@@ -160,6 +160,14 @@
 <dl class="cpp type">
 <dt class="sig sig-object cpp" id="_CPPv4N5units9reference4unitE">
 <span id="_CPPv3N5units9reference4unitE"></span><span id="_CPPv2N5units9reference4unitE"></span><span class="target" id="structunits_1_1reference_1a844bbd194833fae82a3899db2b8507ba"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">unit</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I_9Dimension_6UnitOfI1DEEN5units9referenceE" title="units::reference::U"><span class="n"><span class="pre">U</span></span></a><a class="headerlink" href="#_CPPv4N5units9reference4unitE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="structunits_1_1reference_1ac90a79c19fedd12ae803444b30c68aed"></span><span class="sig-name descname"><span class="pre">static</span> <span class="pre">constexpr</span> <span class="pre">UNITS_MSVC_WORKAROUND</span> <span class="pre">(Magnitude)</span> <span class="pre">auto</span> <span class="pre">mag</span></span></dt>
 <dd></dd></dl>
 
 </div>
