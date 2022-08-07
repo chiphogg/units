@@ -514,7 +514,7 @@ you should:</p>
 (use <code class="docutils literal notranslate"><span class="pre">-o</span> <span class="pre">build_docs=False</span></code> if you want to skip the documentation generation).</p></li>
 </ol>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/mpusz/units.git <span class="o">&amp;&amp;</span> <span class="nb">cd</span> units
-conan install . -pr &lt;your_conan_profile&gt; -s compiler.cppstd<span class="o">=</span><span class="m">20</span> -c mp-units:user.build:all<span class="o">=</span>True -c user.build:skip_docs<span class="o">=</span>True -b outdated -u
+conan install . -pr &lt;your_conan_profile&gt; -s compiler.cppstd<span class="o">=</span><span class="m">20</span> -c user.build:all<span class="o">=</span>True -c user.build:skip_docs<span class="o">=</span>True -b outdated -u
 conan build .
 </pre></div>
 </div>
@@ -538,7 +538,7 @@ cmake --build --preset release --target <span class="nb">test</span>
 </ol>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/mpusz/units.git <span class="o">&amp;&amp;</span> <span class="nb">cd</span> units
 pip3 install -r docs/requirements.txt
-conan install . -pr &lt;your_conan_profile&gt; -s compiler.cppstd<span class="o">=</span><span class="m">20</span> -c mp-units:user.build:all<span class="o">=</span>True -b missing
+conan install . -pr &lt;your_conan_profile&gt; -s compiler.cppstd<span class="o">=</span><span class="m">20</span> -c user.build:all<span class="o">=</span>True -b missing
 cmake --preset default
 cmake --build --preset release --target documentation
 </pre></div>
@@ -548,7 +548,7 @@ cmake --build --preset release --target documentation
 <section id="packaging">
 <h2>Packaging<a class="headerlink" href="#packaging" title="Permalink to this heading"></a></h2>
 <p>To test CMake installation and Conan packaging or create a Conan package run:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conan create . &lt;username&gt;/&lt;channel&gt; -pr &lt;your_conan_profile&gt; -s compiler.cppstd<span class="o">=</span><span class="m">20</span> -c mp-units:user.build:all<span class="o">=</span>True -c user.build:skip_docs<span class="o">=</span>True -b outdated -u
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conan create . &lt;username&gt;/&lt;channel&gt; -pr &lt;your_conan_profile&gt; -s compiler.cppstd<span class="o">=</span><span class="m">20</span> -c user.build:all<span class="o">=</span>True -c user.build:skip_docs<span class="o">=</span>True -b outdated -u
 </pre></div>
 </div>
 <p>The above will create a Conan package and run tests provided in <em>./test_package</em> directory.</p>
