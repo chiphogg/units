@@ -335,6 +335,12 @@ cmake .. -G <span class="s2">&quot;Ninja Multi-Config&quot;</span> -DCMAKE_TOOLC
 cmake --build . --config Release
 </pre></div>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In case you can’t use CMake 3.23 but you have access to CMake 3.20 or later, you can append
+<code class="docutils literal notranslate"><span class="pre">-c</span> <span class="pre">tools.cmake.cmaketoolchain.presets:max_schema_version=2</span></code> to the <code class="docutils literal notranslate"><span class="pre">conan</span> <span class="pre">install</span></code> command
+which will force Conan to use an older version of CMake Presets schema.</p>
+</div>
 </section>
 <section id="installation-and-reuse">
 <h2>Installation and Reuse<a class="headerlink" href="#installation-and-reuse" title="Permalink to this heading"></a></h2>
