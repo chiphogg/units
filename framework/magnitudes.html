@@ -1,41 +1,83 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
   <title>Magnitudes &mdash; mp-units 0.8.0 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script src="../_static/js/theme.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Units" href="units.html" />
     <link rel="prev" title="Dimensions" href="dimensions.html" /> 
 </head>
 
-<body class="wy-body-for-nav"> 
+<body class="wy-body-for-nav">
+
+   
   <div class="wy-grid-for-nav">
+    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
+          
+
+          
             <a href="../index.html" class="icon icon-home"> mp-units
+          
+
+          
           </a>
+
+          
+            
+            
               <div class="version">
                 0.8.0
               </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -43,7 +85,18 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
               <p class="caption" role="heading"><span class="caption-text">Getting Started:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
@@ -90,33 +143,75 @@
 <li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
 </ul>
 
+            
+          
         </div>
+        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">mp-units</a>
+        
       </nav>
 
+
       <div class="wy-nav-content">
+        
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
+    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
           <li><a href="../framework.html">Framework Basics</a> &raquo;</li>
+        
       <li>Magnitudes</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
+        
+          
             <a href="../_sources/framework/magnitudes.rst.txt" rel="nofollow"> View page source</a>
+          
+        
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-             
+            
   <section id="magnitudes">
-<h1>Magnitudes<a class="headerlink" href="#magnitudes" title="Permalink to this heading"></a></h1>
+<h1>Magnitudes<a class="headerlink" href="#magnitudes" title="Permalink to this heading">¶</a></h1>
 <p>The ratio of two Units of the same Dimension—say, <code class="docutils literal notranslate"><span class="pre">inches</span></code> and <code class="docutils literal notranslate"><span class="pre">centimeters</span></code>—is some
 constant number, which is known at compile time.  It’s a positive real number—a <em>Magnitude</em>.</p>
 <p>We also use Magnitudes for <em>Dimensionless</em> Units.  <code class="docutils literal notranslate"><span class="pre">percent</span></code> has a Magnitude of <span class="math notranslate nohighlight">\(1/100\)</span>, and
@@ -142,7 +237,7 @@ powers.</p>
 implementation is fascinating—but, for purposes of this present page, it’s also a distraction.
 <em>Here,</em> we’re more focused on how to <em>use</em> these Magnitudes.</p>
 <section id="one-type-per-magnitude-one-value-per-type">
-<h2>One type per Magnitude, one value per type<a class="headerlink" href="#one-type-per-magnitude-one-value-per-type" title="Permalink to this heading"></a></h2>
+<h2>One type per Magnitude, one value per type<a class="headerlink" href="#one-type-per-magnitude-one-value-per-type" title="Permalink to this heading">¶</a></h2>
 <p>Each typical numeric type (<code class="docutils literal notranslate"><span class="pre">double</span></code>, <code class="docutils literal notranslate"><span class="pre">int64_t</span></code>, …) can represent a wide variety of values: the
 more, the better.  However, Magnitudes are <strong>not</strong> like that.  Instead, they comprise a <em>variety</em> of
 types, and each type can hold only <em>one</em> value.</p>
@@ -162,7 +257,7 @@ values in the usual way using <code class="docutils literal notranslate"><span c
 </ul>
 </section>
 <section id="traits-integers-and-rational-magnitudes">
-<h2>Traits: integers and rational Magnitudes<a class="headerlink" href="#traits-integers-and-rational-magnitudes" title="Permalink to this heading"></a></h2>
+<h2>Traits: integers and rational Magnitudes<a class="headerlink" href="#traits-integers-and-rational-magnitudes" title="Permalink to this heading">¶</a></h2>
 <p>If you have a Magnitude instance <code class="docutils literal notranslate"><span class="pre">m</span></code>, we provide traits to help you reason about integers and
 rational numbers, or manipulate integer or rational parts.</p>
 <ul class="simple">
@@ -195,7 +290,7 @@ Note that this is consistent with how humans would typically write <code class="
 </ul>
 </section>
 <section id="getting-values-out">
-<h2>Getting values out<a class="headerlink" href="#getting-values-out" title="Permalink to this heading"></a></h2>
+<h2>Getting values out<a class="headerlink" href="#getting-values-out" title="Permalink to this heading">¶</a></h2>
 <p>Magnitude types represent numbers in non-numeric types.  They’ve got some amazing strengths (exact
 rational powers!), and some significant weaknesses (no support for basic addition!).  So what if you
 just want to turn a Magnitude <code class="docutils literal notranslate"><span class="pre">m</span></code> into a traditional numeric type <code class="docutils literal notranslate"><span class="pre">T</span></code>?</p>
@@ -209,7 +304,7 @@ with something like <code class="docutils literal notranslate"><span class="pre"
 type, we require <code class="docutils literal notranslate"><span class="pre">is_integral(m)</span></code>.</p>
 </section>
 <section id="how-to-use-magnitudes">
-<h2>How to use Magnitudes<a class="headerlink" href="#how-to-use-magnitudes" title="Permalink to this heading"></a></h2>
+<h2>How to use Magnitudes<a class="headerlink" href="#how-to-use-magnitudes" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p>First, start with your basic inputs: this will typically be <code class="docutils literal notranslate"><span class="pre">mag&lt;N&gt;()</span></code> for any integer <code class="docutils literal notranslate"><span class="pre">N</span></code>, or
 the built-in Magnitude constant <code class="docutils literal notranslate"><span class="pre">mag_pi</span></code>.  (Again, these are all <em>values</em>, not types.)</p></li>
@@ -223,33 +318,50 @@ the built-in Magnitude constant <code class="docutils literal notranslate"><span
 
 
            </div>
+           
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="dimensions.html" class="btn btn-neutral float-left" title="Dimensions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="units.html" class="btn btn-neutral float-right" title="Units" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="dimensions.html" class="btn btn-neutral float-left" title="Dimensions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2018-present, Mateusz Pusz.</p>
-  </div>
+    <p>
+        &#169; Copyright 2018-present, Mateusz Pusz.
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
         </div>
       </div>
+
     </section>
+
   </div>
-  <script>
+  
+
+  <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

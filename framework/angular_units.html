@@ -1,41 +1,83 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
   <title>Angular Units &mdash; mp-units 0.8.0 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script src="../_static/js/theme.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Text Output" href="text_output.html" />
     <link rel="prev" title="Conversions and Casting" href="conversions_and_casting.html" /> 
 </head>
 
-<body class="wy-body-for-nav"> 
+<body class="wy-body-for-nav">
+
+   
   <div class="wy-grid-for-nav">
+    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
+          
+
+          
             <a href="../index.html" class="icon icon-home"> mp-units
+          
+
+          
           </a>
+
+          
+            
+            
               <div class="version">
                 0.8.0
               </div>
+            
+          
+
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -43,7 +85,18 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
               <p class="caption" role="heading"><span class="caption-text">Getting Started:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a></li>
@@ -89,42 +142,84 @@
 <li class="toctree-l1"><a class="reference internal" href="../references.html">References</a></li>
 </ul>
 
+            
+          
         </div>
+        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">mp-units</a>
+        
       </nav>
 
+
       <div class="wy-nav-content">
+        
         <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
+    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
           <li><a href="../framework.html">Framework Basics</a> &raquo;</li>
+        
       <li>Angular Units</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
+        
+          
             <a href="../_sources/framework/angular_units.rst.txt" rel="nofollow"> View page source</a>
+          
+        
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-             
+            
   <section id="angular-units">
-<h1>Angular Units<a class="headerlink" href="#angular-units" title="Permalink to this heading"></a></h1>
+<h1>Angular Units<a class="headerlink" href="#angular-units" title="Permalink to this heading">¶</a></h1>
 <section id="some-background-information">
-<h2>Some background information<a class="headerlink" href="#some-background-information" title="Permalink to this heading"></a></h2>
+<h2>Some background information<a class="headerlink" href="#some-background-information" title="Permalink to this heading">¶</a></h2>
 <p>As per today’s SI, both radian and steradian are dimensionless. This forces the convention to set the angle <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">radian</span></code>
 equal to the number <code class="docutils literal notranslate"><span class="pre">1</span></code> within equations (similar to what natural units system does for <code class="docutils literal notranslate"><span class="pre">c</span></code> constant).</p>
 <p>Following <a class="reference external" href="https://en.wikipedia.org/wiki/Radian#Dimensional_analysis">Wikipedia</a>:</p>
 <blockquote>
 <div><p>Giacomo Prando says “the current state of affairs leads inevitably to ghostly appearances and disappearances of the radian
 in the dimensional analysis of physical equations.” For example, a mass hanging by a string from a pulley will rise or drop
-by <span class="math notranslate nohighlight">\(y=rθ\)</span> centimeters, where <span class="math notranslate nohighlight">\(r\)</span> is the radius of the pulley in centimeters and <span class="math notranslate nohighlight">\(θ\)</span> is the angle
+by <span class="math notranslate nohighlight">\(y=rθ`\)</span> centimeters, where <span class="math notranslate nohighlight">\(r\)</span> is the radius of the pulley in centimeters and <span class="math notranslate nohighlight">\(θ\)</span> is the angle
 the pulley turns in radians. When multiplying <span class="math notranslate nohighlight">\(r\)</span> by <span class="math notranslate nohighlight">\(θ\)</span> the unit of radians disappears from the result.
 Similarly in the formula for the angular velocity of a rolling wheel, <span class="math notranslate nohighlight">\(ω=v/r\)</span>, radians appear in the units of
 <span class="math notranslate nohighlight">\(ω\)</span> but not on the right hand side.
@@ -171,7 +266,7 @@ can be measured in terms of the Planck constant.</p>
 </div></blockquote>
 </section>
 <section id="angular-quantities-in-the-library">
-<h2>Angular quantities in the library<a class="headerlink" href="#angular-quantities-in-the-library" title="Permalink to this heading"></a></h2>
+<h2>Angular quantities in the library<a class="headerlink" href="#angular-quantities-in-the-library" title="Permalink to this heading">¶</a></h2>
 <p>The mp-units library strives to define physically-correct quantities and their units to provide maximum help
 to its users. As treating angle as a dimensional quantity can lead to many “trivial” mistakes in dimensional
 analysis and calculation, it was decided to follow the above approach and treat angle as a base quantity
@@ -180,28 +275,28 @@ with a base unit of radian and solid angle as its derived quantity.</p>
 angle definitions can be found in the <em>units/generic</em> subdirectory. However, in the sake of correctness,
 they are consistently used in the dimensional recipes of all angle-based <a class="reference internal" href="../glossary.html#term-SI"><span class="xref std std-term">SI</span></a> quantities like
 torque or angular velocity:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;units/generic/angle.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;units/isq/si/torque.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;units/math.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;units/quantity_io.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;units/generic/angle.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;units/isq/si/torque.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;units/math.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;units/quantity_io.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">units</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">units</span><span class="o">::</span><span class="nn">isq</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">units</span><span class="o">::</span><span class="nn">aliases</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">units</span><span class="o">::</span><span class="nn">aliases</span><span class="o">::</span><span class="nn">isq</span><span class="o">::</span><span class="nn">si</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">units</span><span class="p">;</span>
+<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">units</span><span class="o">::</span><span class="nn">isq</span><span class="p">;</span>
+<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">units</span><span class="o">::</span><span class="nn">aliases</span><span class="p">;</span>
+<span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">units</span><span class="o">::</span><span class="nn">aliases</span><span class="o">::</span><span class="nn">isq</span><span class="o">::</span><span class="nn">si</span><span class="p">;</span>
 
-<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">Length</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">lever</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cm</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">Force</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">force</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">N</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">Angle</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">deg</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="mi">90</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">Torque</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">torque</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lever</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">force</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">cotes_angle</span><span class="o">&lt;&gt;</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">Length</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">lever</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cm</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">Force</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">force</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">N</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">Angle</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">deg</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="mi">90</span><span class="p">);</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">Torque</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">torque</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lever</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">force</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sin</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">cotes_angle</span><span class="o">&lt;&gt;</span><span class="p">;</span>
 
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Applying a perpendicular force of &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">force</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; to a &quot;</span><span class="w"></span>
-<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">lever</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; long lever results in &quot;</span><span class="w"></span>
-<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">quantity_cast</span><span class="o">&lt;</span><span class="n">si</span><span class="o">::</span><span class="n">newton_metre_per_radian</span><span class="o">&gt;</span><span class="p">(</span><span class="n">torque</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; of torque.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Applying a perpendicular force of &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">force</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; to a &quot;</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">lever</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; long lever results in &quot;</span>
+<span class="w">            </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">quantity_cast</span><span class="o">&lt;</span><span class="n">si</span><span class="o">::</span><span class="n">newton_metre_per_radian</span><span class="o">&gt;</span><span class="p">(</span><span class="n">torque</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; of torque.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>The above program prints:</p>
@@ -215,23 +310,23 @@ You can find more information about this constant in <a class="reference interna
 </div>
 </section>
 <section id="radians-and-degrees-support">
-<h2>Radians and degrees support<a class="headerlink" href="#radians-and-degrees-support" title="Permalink to this heading"></a></h2>
+<h2>Radians and degrees support<a class="headerlink" href="#radians-and-degrees-support" title="Permalink to this heading">¶</a></h2>
 <p>Thanks to <a class="reference internal" href="magnitudes.html#magnitudes"><span class="std std-ref">Magnitudes</span></a> usage the library provides efficient strong types for all
 angular types. This means that with the built-in support for magnitudes of <span class="math notranslate nohighlight">\(\pi\)</span> we can provide
 accurate conversions between radians and degrees. The library also provides common trigonometric functions
 for angular quantities:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">units</span><span class="o">::</span><span class="nn">aliases</span><span class="o">::</span><span class="nn">isq</span><span class="o">::</span><span class="nn">si</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">units</span><span class="o">::</span><span class="nn">aliases</span><span class="o">::</span><span class="nn">isq</span><span class="o">::</span><span class="nn">si</span><span class="p">;</span>
 
-<span class="k">auto</span><span class="w"> </span><span class="n">velocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">km_per_h</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="mi">110</span><span class="p">);</span><span class="w"></span>
-<span class="k">auto</span><span class="w"> </span><span class="n">rate_of_climb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m_per_s</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="mf">-0.63657</span><span class="p">);</span><span class="w"></span>
-<span class="k">auto</span><span class="w"> </span><span class="n">glide_ratio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">velocity</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="o">-</span><span class="n">rate_of_climb</span><span class="p">;</span><span class="w"></span>
-<span class="k">auto</span><span class="w"> </span><span class="n">glide_angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">asin</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">glide_ratio</span><span class="p">);</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">velocity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">km_per_h</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="mi">110</span><span class="p">);</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">rate_of_climb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m_per_s</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="mf">-0.63657</span><span class="p">);</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">glide_ratio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">velocity</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="o">-</span><span class="n">rate_of_climb</span><span class="p">;</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">glide_angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">asin</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">glide_ratio</span><span class="p">);</span>
 
-<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">format</span><span class="p">(</span><span class="s">&quot;Glide ratio: {:%.1Q %q}</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">quantity_cast</span><span class="o">&lt;</span><span class="n">units</span><span class="o">::</span><span class="n">one</span><span class="o">&gt;</span><span class="p">(</span><span class="n">glide_ratio</span><span class="p">));</span><span class="w"></span>
-<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Glide angle:</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">format</span><span class="p">(</span><span class="s">&quot; - {:%.4Q %q}</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">glide_angle</span><span class="p">);</span><span class="w"></span>
-<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">format</span><span class="p">(</span><span class="s">&quot; - {:%.2Q %q}</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">quantity_cast</span><span class="o">&lt;</span><span class="n">units</span><span class="o">::</span><span class="n">degree</span><span class="o">&gt;</span><span class="p">(</span><span class="n">glide_angle</span><span class="p">));</span><span class="w"></span>
-<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">format</span><span class="p">(</span><span class="s">&quot; - {:%.2Q %q}</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">quantity_cast</span><span class="o">&lt;</span><span class="n">units</span><span class="o">::</span><span class="n">gradian</span><span class="o">&gt;</span><span class="p">(</span><span class="n">glide_angle</span><span class="p">));</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">format</span><span class="p">(</span><span class="s">&quot;Glide ratio: {:%.1Q %q}</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">quantity_cast</span><span class="o">&lt;</span><span class="n">units</span><span class="o">::</span><span class="n">one</span><span class="o">&gt;</span><span class="p">(</span><span class="n">glide_ratio</span><span class="p">));</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Glide angle:</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">format</span><span class="p">(</span><span class="s">&quot; - {:%.4Q %q}</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">glide_angle</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">format</span><span class="p">(</span><span class="s">&quot; - {:%.2Q %q}</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">quantity_cast</span><span class="o">&lt;</span><span class="n">units</span><span class="o">::</span><span class="n">degree</span><span class="o">&gt;</span><span class="p">(</span><span class="n">glide_angle</span><span class="p">));</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">format</span><span class="p">(</span><span class="s">&quot; - {:%.2Q %q}</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">quantity_cast</span><span class="o">&lt;</span><span class="n">units</span><span class="o">::</span><span class="n">gradian</span><span class="o">&gt;</span><span class="p">(</span><span class="n">glide_angle</span><span class="p">));</span>
 </pre></div>
 </div>
 <p>The above program prints:</p>
@@ -253,33 +348,50 @@ A better but longer code can be found in the <a class="reference internal" href=
 
 
            </div>
+           
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="conversions_and_casting.html" class="btn btn-neutral float-left" title="Conversions and Casting" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="text_output.html" class="btn btn-neutral float-right" title="Text Output" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="conversions_and_casting.html" class="btn btn-neutral float-left" title="Conversions and Casting" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2018-present, Mateusz Pusz.</p>
-  </div>
+    <p>
+        &#169; Copyright 2018-present, Mateusz Pusz.
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
         </div>
       </div>
+
     </section>
+
   </div>
-  <script>
+  
+
+  <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>
